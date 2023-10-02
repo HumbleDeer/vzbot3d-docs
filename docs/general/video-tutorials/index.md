@@ -8,6 +8,12 @@ has_toc: true
 
 # Video tutorials
 
+## Setup tutorials
+
+Sync your AWD motors. New method by [Vez3D](https://www.youtube.com/@Vez3D)
+
+![Sync your AWD motors. New method](https://www.youtube.com/watch?v=so9oqJyirKY)
+
 ## Community videos
 
 ### VzBot 330
