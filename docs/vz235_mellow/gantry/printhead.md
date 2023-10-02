@@ -20,39 +20,66 @@ In this section we'll assemble the Toolhead for the VzBot.
 
 ## Parts
 
-| Part | Location | Info |
-|:-|:-|:-|
-| M3 x 6mm <br/> Quantity: 4 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 | |
-| TODO | |
+Hardware used in this section of the manual:
 
-## STLs
+Kit parts:
+| Part                         | Location                                 | Info                         |
+| :--------------------------- | :--------------------------------------- | :--------------------------- |
+| M2.5 x 5mm <br/> Quantity: 2 | **Layer**: 3 <br/> **Box**: VZ330 Box 6  | Ultra Low Profile screwheads |
+| M3 x 5mm <br/> Quantity: 4   | **Layer**: 3 <br/> **Box**: VZ330 Box 6  |                              |
+| M3 x 6mm <br/> Quantity: 16  | **Layer**: 3 <br/> **Box**: VZ330 Box 6  |                              |
+| M3 x 6mm <br/> Quantity: 6   | **Layer**: 3 <br/> **Box**: VZ330 Box 6  | Ultra Low Profile screwheads |
+| M3 x 8mm <br/> Quantity: 2   | **Layer**: 3 <br/> **Box**: VZ330 Box 6  |                              |
+| M3 x 10mm <br/> Quantity: 2  | **Layer**: 3 <br/> **Box**: VZ330 Box 6  |                              |
+| M3 x 30mm <br/> Quantity: 2  | **Layer**: 3 <br/> **Box**: VZ330 Box 6  |                              |
+| M3 nut <br/> Quantity: 2     | **Layer**: 3 <br/> **Box**: VZ330 Box 6  |                              |
+|                              |
+| Back part of printhead       | **Layer**: 3 <br/> **Box**: VZ330 Box C  |                              |
+| Goliath Hotend               | **Layer**: 3 <br/> **Box**: VZ330 Box C  |                              |
+| Adapter plate                | **Layer**: 3 <br/> **Box**: VZ330 Box C  |                              |
+| Top plate                    | **Layer**: 3 <br/> **Box**: VZ330 Box C  |                              |
+| Bottom plate                 | **Layer**: 3 <br/> **Box**: VZ330 Box C  |                              |
+| Side pieces                  | **Layer**: 3 <br/> **Box**: VZ330 Box C  |                              |
+| Belts <br/> Quantity: 2      | **Layer**: ? <br/> **Box**: accesesories |                              |
 
-| File name | Amount to print | Note |
-|-----------|-----------------|------|
-| <a href="https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/X-endstop-mount.stl" target="_blank">X end stop switch mount</a> | 1 | - |
-| <a href="https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/cable_holder.stl" target="_blank">Cable Holder</a> | 1 | - |
-| <a href="https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/fan%20duct%20lower%20Goliath%20long.stl" target="_blank">Fan duct Goliath</a> | 1 | Pick this if no beacon is used |
-| <a href="https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/fan%20duct%20lower%20Goliath%20short%20with%20Beacon.stl" target="_blank">Fan duct Goliath ( beacon )</a> | 1 | Use this duct for Goliath and beacon |
-| <a href="https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/fan%20duct%20lower%20Goliath%20spacers.stl" target="_blank">Fan duct Goliath spacers</a> | 1 | - |
-| <a href="https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/CPAP%20turbo%20cooling%20system/STLs/upper%20duct.stl" target="_blank">Fan duct upper</a> | 1 | - |
-| <a href="https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/CPAP%20turbo%20cooling%20system/STLs/upper%20duct%20mount.stl" target="_blank">Upper duct mount</a> | 1 | - |
-| <a href="https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/CPAP%20turbo%20cooling%20system/STLs/c-clamp.stl" target="_blank">Upper duct cpcp c clamp</a> | 1 | - |
-| <a href="https://github.com/VzBoT3D/Goliath/blob/main/STL/Air%20Cool%20Fan%20duct/Fan%20duct%202510-With%20flange%20for%20Vz-Printhead%20CNC.stl" target="_blank">Goliath 2410 fan duct</a> | 1 | - |
+Other parts:
+| Part                               | Info        |
+| ---------------------------------- | ----------- |
+| PTFE Tube (22mm) <br/> Quantity: 1 | self source |
+| M3 heat insert <br/> Quantity: 2   | self source |
+
+Printed parts (STL's):
+| File name                     | Amount to print | Note                                 |
+| ----------------------------- | --------------- | ------------------------------------ |
+| [X end stop switch mount][]   | 1               | -                                    |
+| [Cable Holder][]              | 1               | -                                    |
+| [Fan duct Goliath][]          | 1               | Pick this if no beacon is used       |
+| [Fan duct Goliath (beacon)][] | 1               | Use this duct for Goliath and beacon |
+| [Fan duct Goliath spacers][]  | 1               | -                                    |
+| [Fan duct upper][]            | 1               | -                                    |
+| [Upper duct mount][]          | 1               | -                                    |
+| [Upper duct CPAP C-clamp][]   | 1               | -                                    |
+| [Goliath 2510 fan duct][]     | 1               | -                                    |
+
+[X end stop switch mount]: https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/X-endstop-mount.st
+[Cable Holder]: https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/cable_holder.stl
+[Fan duct Goliath]: https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/fan%20duct%20lower%20Goliath%20long.stl
+[Fan duct Goliath (beacon)]: https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/fan%20duct%20lower%20Goliath%20short%20with%20Beacon.stl
+[Fan duct Goliath spacers]: https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/fan%20duct%20lower%20Goliath%20spacers.stl
+[Fan duct upper]: https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/CPAP%20turbo%20cooling%20system/STLs/upper%20duct.stl
+[Upper duct mount]: https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/CPAP%20turbo%20cooling%20system/STLs/upper%20duct%20mount.stl
+[Upper duct CPAP C-clamp]: https://github.com/VzBoT3D/Vz-Printhead-CNC/blob/main/STLs/CPAP%20turbo%20cooling%20system/STLs/c-clamp.stl
+[Goliath 2510 fan duct]: https://github.com/VzBoT3D/Goliath/blob/main/STL/Air%20Cool%20Fan%20duct/Fan%20duct%202510-With%20flange%20for%20Vz-Printhead%20CNC.stl
 
 ## Step 1
 
-{: .highlight }
-> Required
->
-> &#8226; Box 6 - M3 x 6mm  
-> &#8226; Box C
-
-| Part | Location
-|:-|:-|
+Parts used:
+| Part                       | Location                                |
+| :------------------------- | :-------------------------------------- |
 | M3 x 6mm <br/> Quantity: 4 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
-| Back part of printhead | **Layer**: 3 <br/> **Box**: VZ330 Box C |
-| Cable Holder | [STLs](#stls) |
-| Printhead cable holder | [STLs](#stls) |
+| Back part of printhead     | **Layer**: 3 <br/> **Box**: VZ330 Box C |
+| Cable Holder               | [STLs](#parts)                          |
+| Printhead cable holder     | [STLs](#parts)                          |
 
 |:-|:-|
 | ![Part 1](../../assets/images/manual/vz330_mellow/gantry/printhead/step1.png) | &#8226; Screw on the printhead cable holder with two M3 x 6mm screws <br/> &#8226; Attach the printed cable holder to the top with two M3 x 6mm screws.
@@ -60,26 +87,20 @@ In this section we'll assemble the Toolhead for the VzBot.
 
 ## Step 2
 
-{: .highlight }
-> Required
->
-> &#8226; Box 6 - M3 x 6mm  
-> &#8226; Box 6 - M3 x 5mm  
-> &#8226; Box C
-
-| Part | Location
-|:-|:-|
-| M3 x 6mm <br/> Quantity: 8 | **Layer**: 3 <br/> **Box**: VZ330 Box 6|
+Parts used:
+| Part                       | Location                                |
+| :------------------------- | :-------------------------------------- |
+| M3 x 6mm <br/> Quantity: 8 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
 | M3 x 5mm <br/> Quantity: 4 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
-| Part from step 1 | [Part from step 1](#step-1) |
-| Top plate | **Layer**: 3 <br/> **Box**: VZ330 Box C |
-| Bottom plate | **Layer**: 3 <br/> **Box**: VZ330 Box C |
-| Side pieces | **Layer**: 3 <br/> **Box**: VZ330 Box C |
+| Part from step 1           | [Part from step 1](#step-1)             |
+| Top plate                  | **Layer**: 3 <br/> **Box**: VZ330 Box C |
+| Bottom plate               | **Layer**: 3 <br/> **Box**: VZ330 Box C |
+| Side pieces                | **Layer**: 3 <br/> **Box**: VZ330 Box C |
 
 {: .warning }
 > Important
 >
-> The front arms need to be installed like shown in the picture, be careful otherwise the belt routing will not work.
+> The front arms of the Vz-Printhead need to be installed as shown in the picture. Any other orientation will cause the belt routing to not work out.
 
 |:-|:-|
 | ![Part 1](../../assets/images/manual/vz330_mellow/gantry/printhead/step2.png) | &#8226; Screw on the top plate to the MGN carriage with the four M3 x 5mm screws <br/> &#8226; Install the back part from step 1 to the top plate with the two M3 x 6mm screws <br/> &#8226; Install the front spacers with two M3 x 6mm screws <br/> &#8226; Install the bottom plate to the assembly with four M3 x 6mm screws.
@@ -87,14 +108,9 @@ In this section we'll assemble the Toolhead for the VzBot.
 
 ## Step 3
 
-{: .highlight }
-> Required
->
-> &#8226; Box 6 - M3 x 6mm  
-> &#8226; Box 6 - M2 x 8mm
-
-| Part | Location |
-|:-|:-|
+Parts used:
+| Part                       | Location                                |
+| :------------------------- | :-------------------------------------- |
 | M3 x 6mm <br/> Quantity: 2 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
 | M2 x 8mm <br/> Quantity: 2 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
 
@@ -104,18 +120,13 @@ In this section we'll assemble the Toolhead for the VzBot.
 
 ## Step 4
 
-{: .highlight }
-> Required
->
-> &#8226; Box 6 - M3 x 6mm  
-> &#8226; Box 6 - M3 t-nut
-
-| Part | Location
-|:-|:-|
+Parts used:
+| Part                       | Location                                |
+| :------------------------- | :-------------------------------------- |
 | M3 x 6mm <br/> Quantity: 2 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
-| M3 nut <br/> Quantity: 2 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
-| Part from step 3 | [Part from step 3](#step-3) |
-| Fan holder | [STL](#stls) |
+| M3 nut <br/> Quantity: 2   | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
+| Part from step 3           | [Part from step 3](#step-3)             |
+| Fan holder                 | [STL](#parts)                           |
 
 |:-|:-|
 | ![Part 1](../../assets/images/manual/vz330_mellow/gantry/printhead/step4.png) | &#8226; Screw on the printhead fan holder to the assembly with two M3 x 6mm screws and M3 nuts.
@@ -123,31 +134,27 @@ In this section we'll assemble the Toolhead for the VzBot.
 
 ### Step 5
 
+Parts used:
 | Part                    | Location                                |
 | :---------------------- | :-------------------------------------- |
 | Belts <br/> Quantity: 2 | **Layer**:  <br/> **Box**: accesesories |
 
 |:-|:-|
-| [![belt](../../assets/images/manual/vz330_mellow/gantry/printhead/step5.png)](https://www.youtube.com/embed/Ibi27Toh-pg "Apply belt") | &#8226; Make sure the motor's in the front are in the loosest position possible, moved to the back of the motor mount. Do one belth path first then leave a bit extra and cut it then do the other. Check the instructions [here](https://github.com/VzBoT3D/Vz-Printhead-CNC/tree/main/Instructions) for more details on the Vz235 belts in step 5 | 
+| [![belt](../../assets/images/manual/vz330_mellow/gantry/printhead/step5.png)](https://www.youtube.com/embed/Ibi27Toh-pg "Apply belt") | &#8226; Make sure the motor's in the front are in the loosest position possible, moved to the back of the motor mount. Do one belth path first then leave a bit extra and cut it then do the other. Check the instructions [here](https://github.com/VzBoT3D/Vz-Printhead-CNC/tree/main/Instructions) for more details on the Vz235 belts in step 5 |
 {: .instructiontable}
 
 ## Step 6
 
 ### Notes
 
-{: .highlight }
-> Required
->
-> &#8226; Box 6 - M3 x 10mm  
-> &#8226; Box 6 - M3 x 30mm
-
-| Part | Location |
-|:-|:-|
-| M3 x 10mm <br/> Quantity: 2 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
-| M3 x 30mm <br/> Quantity: 2 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
-| M3 heat insert <br/> Quantity: 2 | self source |
-| Fanduct <br/> Quantity: 1 | [STL's](#stls) |
-| xx <br/> Quantity: 1 | [STL's](#stls) |
+Parts used:
+| Part                             | Location                                |
+| :------------------------------- | :-------------------------------------- |
+| M3 x 10mm <br/> Quantity: 2      | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
+| M3 x 30mm <br/> Quantity: 2      | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
+| M3 heat insert <br/> Quantity: 2 | self source                             |
+| Fanduct <br/> Quantity: 1        | [STL's](#stls)                          |
+| xx <br/> Quantity: 1             | [STL's](#stls)                          |
 
 |:-|:-|
 | ![Part 1](../../assets/images/manual/vz330_mellow/gantry/printhead/step6_part1.png)  | &#8226; Insert the heat insert's in the back holes of the fanduct |
@@ -163,16 +170,12 @@ In this section we'll assemble the Toolhead for the VzBot.
 
 ## Step 7
 
-{: .highlight }
-> Required
->
-> &#8226; Box 6 - M3 x 6mm
-
 |:-|
 | ![Part 1](../../assets/images/manual/vz330_mellow/gantry/printhead/step7.png) |
 
-| Part | Location |
-|:-|:-|
+Parts used:
+| Part                                            | Location                                |
+| :---------------------------------------------- | :-------------------------------------- |
 | M3 x 6mm (ultra low profile ) <br/> Quantity: 2 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
 
 |:-|:-|
@@ -181,23 +184,17 @@ In this section we'll assemble the Toolhead for the VzBot.
 
 ## Step 8
 
-{: .highlight }
-> Required
->
-> &#8226; Box 6 - M2.5 x 5mm  
-> &#8226; Box 6 - M3 x 6mm  
-> &#8226; Box C
-
 |:-|
 | ![Part 1](../../assets/images/manual/vz330_mellow/gantry/printhead/step8.png) |
 
-| Part | Location |
-|:-|:-|
+Parts used:
+| Part                                              | Location                                |
+| :------------------------------------------------ | :-------------------------------------- |
 | M2.5 x 5mm (ultra low profile ) <br/> Quantity: 2 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
-| M3 x 6mm (ultra low profile ) <br/> Quantity: 4 | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
-| PFTE Tube (22mm) <br/> Quantity: 1 | self source |
-| Goliath Hotend <br/> Quantity: 1 | **Layer**: 3 <br/> **Box**: VZ330 Box C |
-| Adapter plate <br/> Quantity: 1 | **Layer**: 3 <br/> **Box**: VZ330 Box C |
+| M3 x 6mm (ultra low profile ) <br/> Quantity: 4   | **Layer**: 3 <br/> **Box**: VZ330 Box 6 |
+| PTFE Tube (22mm) <br/> Quantity: 1                | self source                             |
+| Goliath Hotend <br/> Quantity: 1                  | **Layer**: 3 <br/> **Box**: VZ330 Box C |
+| Adapter plate <br/> Quantity: 1                   | **Layer**: 3 <br/> **Box**: VZ330 Box C |
 
 NOTE: Before assembling the Goliath hotend to the printhead, make sure you have applied thermal paste between the heatbreak and the heatsink. Also make sure that all screws are tight and that heatbreak is tight on the heatblock. Please refer to this [article](https://github.com/VzBoT3D/Goliath/tree/main/Instructions)
 
