@@ -2,7 +2,6 @@
 layout: default
 title: Vz235 AWD Video tutorial
 parent: Video tutorials
-permalink: ../vz235-awd/
 ---
 
 # Vz235 AWD build
