@@ -20,13 +20,32 @@ Check out our [Mods](#link-to-mods) section regarding community-based support fo
 
 The preferred OS (Operating System) for a VzBot is MainsailOS, and this is what our documentation will be using as a base for installation and configuration  instructions. To learn more about Mainsail OS, please see the [MainsailOS documentation].
 
+Covered in this guide:
+
+1. [Flashing MainsailOS](#installing-mainsailos) (Klipper **software**)
+    - The software that runs on the SBC or mini-computer (i.e. Raspberry Pi).  
+    - Includes the Mainsail web interface, Moonraker API, Klipper software, and everything you need to get started with Klipper.
+2. [Building Klipper **firmware**](#building-klipper-firmware)
+    - [Preparing the build](#configure-firmware)
+    - [Choosing motherboard settings](#motherboard-model)
+    - [Setting startup pin states](#set-pin-states)
+    - [Building the firmware](#compiling-firmware)
+3. [Installing Klipper **firmware**](#installing-klipper-firmware)
+    This uses the firmware file built during the previous steps
+    - [Retrieving the firmware file](#retrieving-the-firmware)
+    - [Flashing the firmware](#flashing-the-firmware)
+4. [Motherboard serial ID](#motherboard-serial-id)
+    We will need this when setting up our printer configuration (printer.cfg) file
+5. [Extra Pi configuration](#extra-pi-configuration)
+    Set up the Raspberry Pi to function as a secondary MCU. This can be useful for extra features. Setting this up now saves time later.
+
 {: .note-title }
 > DSI touch screen issues
 >
 > There is a known issue with touch screens like those used in the VzBot Mellow kits.
 > More info and fixes: [Touch not working - KlipperScreen]
 
-## Flashing the Pi
+## Installing MainsailOS
 
 Take your Pi's SDCard and put it in your PC/laptop. Now we're gonna use the program called Raspberry Pi Imager to flash the firmware for it onto our SDCard. You can get it here [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
@@ -62,7 +81,7 @@ Now you've done that Press the big button saying Write and it's time to wait a b
 
 ![Specific_OS](../../assets/images/manual/vz235_printed/electronics/Firmware/Writing.PNG)
 
-## Installing Klipper/firmware
+## Building Klipper firmware
 
 Once you've booted up your Pi find the IP adress of it with your Router. This IP will be user specific so we can't help much there.
 
@@ -155,7 +174,9 @@ Once it's done with compiling the firmware you'll see something like this tellin
 
 ![firmwaredone](../../assets/images/manual/vz235_printed/electronics/Firmware/firmwaredone.PNG)
 
-## Putting the firmware on the Motherboard
+## Installing Klipper firmware
+
+### Retrieving the firmware
 
 Now we're gonna use are next bit of software called WinSCP from this site [WinSCP](https://winscp.net/eng/download.php).
 
@@ -173,6 +194,8 @@ Next on the right side go to the Folder: Klipper and then go to the Folder: Out 
 
 Next Right click the file klipper.bin and press Download you'll see a screen giving you a option where to save the file. Put it on the SDCard for the Motherboard. wich you should have plugged into your PC/Laptop at this time.
 
+### Flashing the firmware
+
 Now open the SDCard and rename the file from klipper.bin to firmware.bin.
 
 ![Download](../../assets/images/manual/vz235_printed/electronics/Firmware/download.PNG)
@@ -181,7 +204,7 @@ Now power off your Printer and put in the SDCard with the firmware.bin file. Onc
 
 The file should now be named FLY.CUR meaning the board successfully flashed.
 
-## Serial time
+## Motherboard Serial ID
 
 Now we're gonna make sure the Motherboard can talk to the Pi. Put back the SDCard and power up the printer.
 
@@ -195,7 +218,7 @@ This will give you the serial you need to put in your Printer.cfg to make sure t
 
 ![stm32](../../assets/images/manual/vz235_printed/electronics/Firmware/serial.PNG)
 
-## Pi as secondary MCU
+## Extra Pi configuration
 
  Next up we're gonna run a few small commands through Putty so we can use the Pi as a secondary MCU to control CPAP.
 
