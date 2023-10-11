@@ -1,7 +1,10 @@
 ---
 layout: default
 title: Electronics
-parent: General info # temporarily here to clean up the sidebar links
+description: # This shows up on rich mbeds in e.g. Discord
+parent: General info
+# slug: # Whatever you'd like the page address to be below general, i.e. docs.vzbot.org/general/<page>/
+
 ---
 
 # Electronics
