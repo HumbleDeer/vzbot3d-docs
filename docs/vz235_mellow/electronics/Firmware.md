@@ -11,13 +11,13 @@ permalink: /vz235_mellow/electronics/Firmware
 
 # 6.3 Firmware Setup
 
-Time to start flashing our Pi and Motherboard.
+Time to start flashing our Raspberry Pi and printer mainboard.
 
 {: .note-title }
 > DSI touch screen issues
 >
 > There is a known issue with the Vz235 Mellow kit touch screen.
-> More info and fixes: [Touch not working - KlipperScreen][] 
+> More info and fixes: [Touch not working - KlipperScreen][]
 
 [Touch not working - KlipperScreen]: https://klipperscreen.readthedocs.io/en/latest/Troubleshooting/Touch_issues/
 
@@ -73,7 +73,7 @@ Next up you'll be greeted with the Login screen. The username is default: pi and
 
 First we're gonna be updating the Pi with some commands. You'll be asked to enter your password sometimes and that's the same as we used to login so: raspberry.
 
-Enter these 2 commands in the order shown bellow and wait for everything to finish.
+Enter these 2 commands in the order shown below and wait for everything to finish.
 
 ```bash
 sudo apt-get update
@@ -95,7 +95,7 @@ cd ~/klipper/
 make menuconfig
 ```
 
-You'll be greeted with this beautifull screen.
+You'll be greeted by this beautiful screen.
 
 ![menuconfig](../../assets/images/manual/vz235_printed/electronics/Firmware/menuconfig.PNG)
 
