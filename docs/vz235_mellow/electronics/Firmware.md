@@ -178,31 +178,39 @@ Once it's done with compiling the firmware you'll see something like this tellin
 
 ### Retrieving the firmware
 
-Now we're gonna use are next bit of software called WinSCP from this site [WinSCP](https://winscp.net/eng/download.php).
+In order to flash the firmware file on to our motherboard, we need to retrieve the built firmware file from our Raspberry Pi.
 
-Once downloaded start it up and you'll see a screen like this.
+1. Copy the firmware file from the Klipper `out` folder to the `printer_data` folder:
 
-![WinSCP](../../assets/images/manual/vz235_printed/electronics/Firmware/WinSCP.PNG)
+    ```bash
+    cp ~/klipper/out/klipper.bin ~/printer_data/config/firmware.bin
+    ```
 
-Again fill in your printers details and press Login. It will give you a warning since this is the first time connecting but just press Add. Once logged in you'll see the files on your Pi.
-
-![logged in](../../assets/images/manual/vz235_printed/electronics/Firmware/loggedin.PNG)
-
-Next on the right side go to the Folder: Klipper and then go to the Folder: Out Like shown Bellow.
-
-![out](../../assets/images/manual/vz235_printed/electronics/Firmware/out.PNG)
-
-Next Right click the file klipper.bin and press Download you'll see a screen giving you a option where to save the file. Put it on the SDCard for the Motherboard. wich you should have plugged into your PC/Laptop at this time.
+2. Open the Mainsail's interface
+3. Navigate to the Machine tab
+4. Navigate to the `printer_data/config/` folder
+5. Download the `firmware.bin` file, and save it to your computer.
 
 ### Flashing the firmware
 
-Now open the SDCard and rename the file from klipper.bin to firmware.bin.
+For these steps, you can use either the Raspberry Pi's SD-card or use a different SD-card formatted as FAT32.
 
-![Download](../../assets/images/manual/vz235_printed/electronics/Firmware/download.PNG)
+Start these steps with the printer **powered off**!
 
-Now power off your Printer and put in the SDCard with the firmware.bin file. Once you power it back on again and wait a couple of minutes and take out the SDCard and put it in your PC/Laptop.
+1. Insert the SD-card into your computer
+2. Open the SD-card using your computer's file browser
+3. Place the just-downloaded `firmware.bin` file onto the SD-card
+4. Eject and remove the SD-card from your computer
+5. Place the SD-card in the printer's motherboard (not the Pi)
+6. Power the printer back on  
+    Wait for a couple of minutes, to ensure sufficient time has passed to flash the firmware onto the board.
+7. Power the printer back off
+8. Remove the SD-card from the printer motherboard, and insert it back in your computer.
+    💡 The firmware.bin file should now have renamed itself to `FLY.CUR` or something similar
 
-The file should now be named FLY.CUR meaning the board successfully flashed.
+At last: if you used the Raspberry Pi's SD-card, then re-insert this SD-card into the Raspberry Pi's SD-card slot.
+
+You can now power on the printer.
 
 ## Motherboard Serial ID
 
