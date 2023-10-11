@@ -220,51 +220,44 @@ This will give you the serial you need to put in your Printer.cfg to make sure t
 
 ## Extra Pi configuration
 
-Next up we're gonna run a few small commands through Putty so we can use the Pi as a secondary MCU to control CPAP.
+Setting up the Raspberry Pi to function as a secondary microcontroller (MCU) for Klipper to address could be useful when addressing GPIO pins on the Raspberry Pi board. This is achieved by building and installing a software service Klipper can communicate with, which addresses the operating system for control over i.e. GPIO pins.
 
-```bash
-cd ~/klipper/
-```
+This was previously used to control the CPAP cooling fan, but is now no longer required for this purpose. Still, setting this up now saves the headache of having to do this later.
 
-```bash
-sudo cp ./scripts/klipper-mcu.service /etc/systemd/system/
-```
+To get started with setting the Raspberry Pi up as a secondary MCU:
 
-```bash
-sudo systemctl enable klipper-mcu.service
-```
+1. Navigate to the Klipper user's home directory
 
-Next we select the correct MCU for the Pi.
+    ```bash
+    cd ~/klipper/
+    ```
 
-```bash
-cd ~/klipper/
-```
+2. Copy the service from the Klipper directory to the OS, and enable it
 
-```bash
-make menuconfig
-```
+    ```bash
+    sudo cp ./scripts/klipper-mcu.service /etc/systemd/system/
+    sudo systemctl enable klipper-mcu.service
+    ```
 
-In the menu, set "Microcontroller Architecture" to "Linux process," then save and exit.
+3. Open the configuration menu, and select the correct MCU for the Pi.
 
-To build and install the new micro-controller code, run:
+    ```bash
+    make menuconfig
+    ```
 
-```bash
-sudo service klipper stop
-```
+    In the menu, set "Microcontroller Architecture" to "Linux process," then save and exit.
 
-```bash
-make flash
-```
+4. Stop Klipper, build the new service, and restart Klipper
 
-```bash
-sudo service klipper start
-```
+    ```bash
+    sudo service klipper stop
+    make flash
+    sudo service klipper start
+    ```
 
-If klippy.log reports a "Permission denied" error when attempting to connect to /tmp/klipper_host_mcu then you need to add your user to the tty group. The following command will add the "pi" user to the tty group:
-
-```bash
-sudo usermod -a -G tty pi
-```
+{: .note }
+> If klippy.log reports a "Permission denied" error when attempting to connect to /tmp/klipper_host_mcu then you need to add your user to the tty group.  
+> Add the `pi` user to the `tty` group by running `sudo usermod -a -G tty pi` in the terminal.
 
 [MKS Pi]: https://github.com/makerbase-mks/MKS-PI
 [Fly Pi]: https://mellow-3d.github.io/fly_pi_general.html
