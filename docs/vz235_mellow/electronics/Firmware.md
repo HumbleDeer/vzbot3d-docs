@@ -13,13 +13,18 @@ permalink: /vz235_mellow/electronics/Firmware
 
 Time to start flashing our Raspberry Pi and printer mainboard.
 
+This guide assumes you are using a genuine or official Raspberry Pi. Other SBC's or platforms (e.g. [MKS Pi], [Fly Pi], [BTT Pi], [BTT CB1], etc) may work, but aren't natively supported by the VzBot project as of now.
+<!-- Commented out for future use 
+Check out our [Mods](#link-to-mods) section regarding community-based support for other or unsupported platforms.
+--->
+
+The preferred OS (Operating System) for a VzBot is MainsailOS, and this is what our documentation will be using as a base for installation and configuration  instructions. To learn more about Mainsail OS, please see the [MainsailOS documentation].
+
 {: .note-title }
 > DSI touch screen issues
 >
-> There is a known issue with the Vz235 Mellow kit touch screen.
-> More info and fixes: [Touch not working - KlipperScreen][]
-
-[Touch not working - KlipperScreen]: https://klipperscreen.readthedocs.io/en/latest/Troubleshooting/Touch_issues/
+> There is a known issue with touch screens like those used in the VzBot Mellow kits.
+> More info and fixes: [Touch not working - KlipperScreen]
 
 ## Flashing the Pi
 
@@ -238,4 +243,9 @@ If klippy.log reports a "Permission denied" error when attempting to connect to 
 sudo usermod -a -G tty pi
 ```
 
+[MKS Pi]: https://github.com/makerbase-mks/MKS-PI
+[Fly Pi]: https://mellow-3d.github.io/fly_pi_general.html
+[BTT Pi]: https://bigtreetech.github.io/docs/CB1.html
+[BTT CB1]: https://bigtreetech.github.io/docs/CB1.html
+[MainsailOS documentation]: https://docs-os.mainsail.xyz/
 [Touch not working - KlipperScreen]: https://klipperscreen.readthedocs.io/en/latest/Troubleshooting/Touch_issues/
