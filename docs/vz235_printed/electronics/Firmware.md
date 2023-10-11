@@ -206,17 +206,25 @@ The file should now be named FLY.CUR meaning the board successfully flashed.
 
 ## Motherboard Serial ID
 
-Now we're gonna make sure the Motherboard can talk to the Pi. Put back the SDCard and power up the printer.
+In order to configure Klipper to use our motherboard, it requires a serial device to communicate with. Make sure your printer motherboard is **connected to the Pi** using the motherboard's USB-C port before proceeding with these steps.
 
-Once it's all powered on open Putty Login and type in this command.
+In order to retrieve our motherboard's serial ID or name, return to the previously opened (PuTTY) terminal.
+
+<!-- Now we're gonna make sure the Motherboard can talk to the Pi. Put back the SDCard and power up the printer. -->
+
+<!-- Once it's all powered on open Putty Login and type in this command. -->
+
+Run `ls /dev/serial/by-id/*` in the terminal to retrieve your motherboard's serial ID. If this was succesful, you might see the following:
 
 ```bash
-ls /dev/serial/by-id/*
+pi@mainsailos:~ $ ls /dev/serial/by-id/*
+/dev/serial/by-id/usb-Klipper_stm32f407xx_XXXXXXXXXXXXXXXXXXXXXXXX-xxXX
 ```
 
-This will give you the serial you need to put in your Printer.cfg to make sure they can talk to eachother.
+Copy the line containing `/dev/serial/by-id` to your clipboard, a text file, or write it down. **We will need this** when configuring Klipper for our printer.
 
-![stm32](../../assets/images/manual/vz235_printed/electronics/Firmware/serial.PNG)
+Error? Make sure your motherboard is connected to the Raspberry Pi.  
+*If this is not the problem*, please see the information outlined in [Bug in /dev/serial/by-id](/general/troubleshooting/udev-bug) for further troubleshooting steps and instructions on a resolution.
 
 ## Extra Pi configuration
 
